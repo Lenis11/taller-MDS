@@ -8,6 +8,20 @@ reserva_actual = None
 
 cancelando_reserva = False
 
+def Inicio():
+    global V1
+    V1 = tk.Tk()
+    V1.title("Restaurante Mediterráneo")
+
+    imagen = tk.PhotoImage(file="LogoRes.png")
+    label_img = tk.Label(V1, image=imagen)
+    label_img.image = imagen
+    label_img.pack(pady=20)
+
+    tk.Button(V1, text="Reservar", command=Formulario).pack(pady=10)
+    tk.Button(V1, text="Cancelar Reserva", command=CancelarReservaFormulario).pack(pady=5)
+
+    V1.mainloop()
 
 
 def Formulario():
